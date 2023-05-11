@@ -4,7 +4,7 @@ int main(){
     fs::path p;
     p = fs::path(DATABASE);
     std::vector<Person> data;
-    int choice = 0;
+    int choice = 0;     // 用户选择的功能选项
     int idx = 1;
     while(true) {
         show_menu();
