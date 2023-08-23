@@ -18,7 +18,11 @@ class Table:
         if self.table[row, col] == 0:
             self.table[row, col] = player * 9 + num
             return True
-        elif num > self.table[row, col]:
+        
+        real_piece = self.table[row, col]
+        if real_piece > 9:
+            real_piece -= 9
+        if num > real_piece:
             self.table[row, col] = player * 9 + num
             return True
         else:
